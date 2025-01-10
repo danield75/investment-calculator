@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
+  initialInvestment?: number;
+  annualInvestment?: number;
+  expectedReturn?: number;
+  duration?: number;
 
+  onSubmit() {
+    console.log('SUBMITTED!');
+  }
 }
