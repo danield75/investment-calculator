@@ -9,19 +9,19 @@ import { InvestmentService } from '../investment.service';
 })
 
 export class UserInputComponent {
-  initialInvestment = 0;
-  annualInvestment = 0;
-  expectedReturn = 0;
-  duration = 0;
+  enteredInitialInvestment = 0;
+  enteredAnnualInvestment = 0;
+  enteredExpectedReturn = 0;
+  enteredDuration = 0;
 
   private investmentService = inject(InvestmentService);
 
   onSubmit() {
     this.investmentService.calculateInvestmentResults({
-      initialInvestment: this.initialInvestment,
-      duration: this.duration,
-      expectedReturn: this.expectedReturn,
-      annualInvestment: this.annualInvestment,
+      initialInvestment: this.enteredInitialInvestment,
+      duration: this.enteredDuration,
+      expectedReturn: this.enteredExpectedReturn,
+      annualInvestment: this.enteredAnnualInvestment,
     });
   }
 }
